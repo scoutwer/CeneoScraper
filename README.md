@@ -5,7 +5,7 @@
 
 ## Algorytm pobierania opinii o produkcie z serwiu Ceneo
 1. Wysłanie żądania dostępu do strony internetowej z opiniami o produkcie 
-2. Jeżeli operacja zakończy się powodzeniem, wyądrębnienie z kodu strony opinii o produkcie 
+2. Jeżeli operacja zakończy się powodzeniem, wyodrębnienie z kodu strony opinii o produkcie 
 3. Dla każdej opinii wyoądrebnienie z kodu html poszczególnych składowych i przypisanie ich do elementów złożonej struktury danych 
 4. Jeśli istnieje kolejna strona z opiniami, przejście do niej i powtórzenie dla niej kroków 1-4
 5. Zapisanie wyników do bazy danych 
@@ -14,7 +14,7 @@
 
 |składowa|zmienna|selektor|
 |--------|-------|--------|
-|opinia|review|div.js_product-review|
+|opinia|review|div.js_product-review:not(.user-post--highlight)|
 |identyfikator opinii|review_id|["data-entry-id"]|
 |autora|author|span.user-post__author-name|
 |rekomendację|recommendation|span.user-post__author-recomendation > em|
